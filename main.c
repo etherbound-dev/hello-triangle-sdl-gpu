@@ -352,19 +352,19 @@ SDL_GPUShader *LoadShader(SDL_GPUDevice *device, const char *filename, Uint32 sa
 
 	if (backend_formats & SDL_GPU_SHADERFORMAT_SPIRV)
 	{
-		SDL_snprintf(fullpath, sizeof(fullpath), "%sresources/%s.spv", basepath, filename);
+		SDL_snprintf(fullpath, sizeof(fullpath), "%sshaders/%s.spv", basepath, filename);
 		entrypoint = "main";
 		format = SDL_GPU_SHADERFORMAT_SPIRV;
 	}
 	else if (backend_formats & SDL_GPU_SHADERFORMAT_DXIL)
 	{
-		SDL_snprintf(fullpath, sizeof(fullpath), "%sresources/%s.dxil", basepath, filename);
+		SDL_snprintf(fullpath, sizeof(fullpath), "%sshaders/%s.dxil", basepath, filename);
 		entrypoint = "main";
 		format = SDL_GPU_SHADERFORMAT_DXIL;
 	}
 	else if (backend_formats & SDL_GPU_SHADERFORMAT_MSL)
 	{
-		SDL_snprintf(fullpath, sizeof(fullpath), "%sresources/%s.msl", basepath, filename);
+		SDL_snprintf(fullpath, sizeof(fullpath), "%sshaders/%s.msl", basepath, filename);
 		entrypoint = "main0";
 		format = SDL_GPU_SHADERFORMAT_MSL;
 	}
